@@ -39,10 +39,20 @@
             bindings = <&kp ESC>;
         };
 
-        combo_tvp {
+        layer-0-toggle {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
+            bindings = <&tog 0>;
+        };
+
+        enter-combo {
+            bindings = <&kp ENTER>;
+            key-positions = <8 9>;
+        };
+
+        layer-selection-layer {
+            bindings = <&tog 2>;
+            key-positions = <32 33 34 35 36 37>;
         };
     };
 
@@ -85,19 +95,17 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q       &kp W       &kp E               &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O           &kp P
-         &mt LGUI A  &mt LALT S  &mt LEFT_CONTROL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt LEFT_ALT L  &mt RGUI SLASH
-&kp TAB  &kp Z       &kp X       &kp C               &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT         &kp MINUS       &kp AT_SIGN
-                                 &mo 2               &mo 1        &kp SPACE    &kp RET  &kp ESCAPE   &kp BSPC
+                &kp Q  &kp W  &kp E         &kp R                 &kp T              &kp Y          &kp U  &kp I      &kp O    &kp P
+                &kp A  &kp S  &kp D         &kp F                 &kp G              &kp H          &kp J  &kp K      &kp L    &kp SLASH
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V                 &kp B              &kp N          &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp AT_SIGN
+                              &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &mt LCTRL SPACE    &kp BACKSPACE  &mo 1  &mo 4
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        nav_layer {
+        Specials {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "SPECIALS";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -111,14 +119,30 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR     &kp DOLLAR  &kp EQUAL     &kp LBRC     &kp RBRC   &kp KP_N7  &kp KP_N8      &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp CAPSLOCK   &kp HASH    &kp PERCENT   &kp LBKT     &kp RBKT   &kp KP_N4  &kp KP_N5      &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp AMPERSAND  &kp EXCL    &kp QUESTION  &kp LPAR     &kp RPAR   &kp KP_N1  &kp KP_N2      &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                  &trans      &trans        &kp SPACE    &kp ENTER  &kp KP_N0  &kp BACKSPACE
+                &kp C_VOLUME_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp GRAVE  &kp SQT   &kp EXCLAMATION  &kp DOLLAR
+                &kp C_VOLUME_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp CARET               &trans             &trans     &trans    &trans           &kp BACKSLASH
+&kp LEFT_SHIFT  &kp C_PP           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS    &kp RPAR           &kp KP_N1  &kp HASH  &kp AMPERSAND    &kp PIPE       &kp PLUS
+                                                 &trans        &kp NUMBER_0  &kp SPACE               &kp BACKSPACE      &trans     &trans
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        gaming {
+            bindings = <
+                &kp ESCAPE        &kp F1  &kp F2  &kp F3  &kp F4       &trans  &trans  &trans  &trans  &trans
+                &kp TAB           &kp Q   &kp W   &kp E   &kp F        &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp A   &kp S   &kp D   &kp C        &trans  &trans  &trans  &trans  &trans  &trans
+                                          &none   &none   &kp SPACE    &trans  &trans  &trans
+            >;
+        };
+
+        layer-navigation-layer {
+            bindings = <
+        &trans  &tog 0  &tog 1  &tog 2  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
 
         sim_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -137,14 +161,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)      &kp SQT     &kp DQT
-        &kp RA(A)    &gif         &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)     &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV     &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &trans    &mo ADJ      &trans        &kp C_PP        &kp BACKSPACE
+            &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)      &kp SQT     &kp DQT
+            &kp RA(A)    &gif         &kp RA(S)  &none     &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)     &kp RA(N4)  &kp RA(O)
+&bt BT_CLR  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV     &kp C_NEXT  &kp BSLH   &trans
+                                      &trans     &trans    &mo 5        &trans        &kp C_PP        &kp BACKSPACE
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -170,8 +192,6 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         tvp1_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -189,14 +209,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp TAB     &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt TVP2 L  &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT   &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                              &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+       &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
+       &lt 7 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
+&kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
+                             &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         tvp2_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -219,15 +237,6 @@
         &kp A        &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
