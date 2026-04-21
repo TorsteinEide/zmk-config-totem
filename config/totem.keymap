@@ -121,7 +121,7 @@
             bindings = <
                 &kp C_VOLUME_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp GRAVE  &kp SQT   &kp DOUBLE_QUOTES  &kp DOLLAR
                 &kp C_VOLUME_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp CARET               &trans             &trans     &trans    &trans             &kp BACKSLASH
-&kp LEFT_SHIFT  &kp C_PP           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS    &kp RPAR           &kp SEMI   &kp HASH  &kp AMPERSAND      &kp PIPE       &kp PLUS
+&kp LEFT_SHIFT  &kp C_PP           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS    &kp RPAR           &kp SEMI   &kp HASH  &kp AMPERSAND      &kp PIPE       &kp EQUAL
                                                  &trans        &kp NUMBER_0  &kp SPACE               &kp BACKSPACE      &trans     &trans
             >;
         };
