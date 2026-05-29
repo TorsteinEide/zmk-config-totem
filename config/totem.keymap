@@ -51,7 +51,7 @@
         };
 
         layer-selection-layer {
-            bindings = <&tog 2>;
+            bindings = <&tog 4>;
             key-positions = <32 33 34 35 36 37>;
         };
     };
