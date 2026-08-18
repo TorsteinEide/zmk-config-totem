@@ -54,6 +54,16 @@
             bindings = <&tog 4>;
             key-positions = <32 33 34 35 36 37>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17>;
+        };
+
+        cps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
@@ -95,10 +105,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q  &kp W  &kp E         &kp R                 &kp T              &kp Y          &kp U  &kp I      &kp O    &kp P
-                &kp A  &kp S  &kp D         &kp F                 &kp G              &kp H          &kp J  &kp K      &kp L    &kp SLASH
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V                 &kp B              &kp N          &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp AT_SIGN
-                              &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &mt LCTRL SPACE    &kp BACKSPACE  &mo 1  &mo 3
+                &kp Q  &kp W             &kp E         &kp R                 &kp T              &kp Y          &kp U  &kp I      &kp O    &kp P
+                &kp A  &mt LEFT_SHIFT A  &kp D         &kp F                 &kp G              &kp H          &kp J  &kp K      &kp L    &mt LEFT_SHIFT SLASH
+&kp LEFT_SHIFT  &kp Z  &kp X             &kp C         &kp V                 &kp B              &kp N          &kp M  &kp COMMA  &kp DOT  &kp MINUS             &kp AT_SIGN
+                                         &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &mt LCTRL SPACE    &kp BACKSPACE  &mo 1  &mo 3
             >;
         };
 
@@ -119,10 +129,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp C_VOLUME_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp GRAVE  &kp SQT   &kp DOUBLE_QUOTES  &kp DOLLAR
-                &kp C_VOLUME_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp CARET               &trans             &trans     &trans    &trans             &kp BACKSLASH
-&kp LEFT_SHIFT  &kp C_PP           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS    &kp RPAR           &kp SEMI   &kp HASH  &kp AMPERSAND      &kp PIPE       &kp EQUAL
-                                                 &trans        &kp NUMBER_0  &kp SPACE               &kp BACKSPACE      &trans     &trans
+                &kp C_VOLUME_UP               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp GRAVE  &kp SQT   &kp DOUBLE_QUOTES  &kp DOLLAR
+                &mt LEFT_SHIFT K_VOLUME_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LBRC                &kp RIGHT_BRACE    &trans     &trans    &trans             &mt LEFT_SHIFT BACKSLASH
+&kp LEFT_SHIFT  &kp C_PP                      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS    &kp RPAR           &kp SEMI   &kp HASH  &kp AMPERSAND      &kp PIPE                  &kp EQUAL
+                                                            &trans        &kp NUMBER_0  &kp SPACE               &kp BACKSPACE      &trans     &trans
             >;
         };
 
